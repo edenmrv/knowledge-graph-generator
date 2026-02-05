@@ -14,8 +14,7 @@ I wanted a way to turn raw text into a visual map. So, I engineered this tool.
 It takes any technical text (syllabus, article, notes) and instantly generates an interactive **Knowledge Graph** using **Llama-3** on **Groq**.
 
 ## 📸 Demo
-*(Here is the app visualizing the Generative AI Ecosystem)*
-![Graph Demo](demo_graph.png)
+I will add demo later
 
 ## 🚀 Key Features
 * **Instant Visualization:** Uses **Groq's LPU** engine for sub-second inference.
