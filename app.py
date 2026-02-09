@@ -9,11 +9,10 @@ import streamlit.components.v1 as components
 # --- Page Configuration ---
 st.set_page_config(
     page_title="Knowledge Graph Generator",
-    page_icon="🕸️",
     layout="wide"
 )
 
-st.title("🕸️ Instant Knowledge Graph (Groq Edition ⚡)")
+st.title("Instant Knowledge Graph (Groq Edition )")
 st.markdown("Generate interactive knowledge graphs instantly using **Llama-3** on **Groq's LPU**.")
 
 # --- API Key Management ---
@@ -33,7 +32,7 @@ def get_groq_api_key():
     # 3. Manual input via Sidebar
     if not api_key:
         with st.sidebar:
-            st.header("🔑 Authentication")
+            st.header("Authentication")
             api_key = st.text_input(
                 "Enter Groq API Key", 
                 type="password", 
@@ -219,12 +218,12 @@ def main():
         placeholder="Paste your text here..."
     )
     
-    if st.button("🚀 Generate Graph", type="primary", use_container_width=True):
+    if st.button("Generate Graph", type="primary", use_container_width=True):
         if not text_input.strip():
             st.warning("Please enter some text first.")
             return
         
-        with st.spinner("⚡ Processing with Llama-3 on Groq..."):
+        with st.spinner("Processing with Llama-3 on Groq..."):
             data = extract_knowledge_graph(text_input, api_key)
             
             if data:
